@@ -2,6 +2,12 @@ let btn= document.querySelector(".calendar");
 let slotUrl = "https://app.appointo.me/scripttag/mock_timeslots?";
 let clickLi = document.querySelector(".availableSlots");
 let addToCart = document.querySelector(".addToCart");
+let loader = document.querySelector(".loader");
+let list = document.querySelector(".availableSlotsli");
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 clickLi.addEventListener("click", () => {
     if(clickLi != ""){
@@ -10,12 +16,16 @@ clickLi.addEventListener("click", () => {
     }
     
   });
-
-function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+function loaderVisibility(){
+    if(document.querySelector(".availableSlots").childElementCount == 0){
+        loader.style.display = "flex";
+    }else if(document.querySelector(".availableSlots").childElementCount >= 1){
+        loader.style.display = "none";
+    }
+    else{
+        loader.style.display = "none";
+    }
 }
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const calendar = new VanillaCalendar('#calendar',{
         type: 'default',
@@ -41,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 btn.addEventListener('click', async()=>{
-    // loaderVisibility();
+    loaderVisibility();
     getSlots();
     let availableSlotsList = await getSlots();
     // loaderVisibility();
@@ -121,5 +131,6 @@ function showAvailableSlots(availableSlotsList){
         li.innerText = slot.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
         slotlist.appendChild(li);
     }
+    loaderVisibility();
 };
 
