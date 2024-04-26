@@ -180,6 +180,7 @@ a{
   animation: spin 2s linear infinite;
   margin-left: 10rem;
   display: none;
+  margin-top: 9rem;
 }
 .addToCart{
   margin-right: 1rem;
