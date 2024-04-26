@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="./vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
+    <script src="./vanilla-calendar/build/vanilla-calendar.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <div class="navBar">
+        <img id="logo", src="https://assets-global.website-files.com/602f6e4385f3c15b5ee4238a/607955a9d5e3528558cc00e1_side_panda-p-500.png">
+        <div class="navItem">
+            <div class="item">Menu</div>
+            <div class="item">Contact Us</div>
+            <div class="item share"><i class="fa-solid fa-arrow-up-right-from-square"></i> Share Link</div>
+        </div>
+    </div>
+    <div class="mainScreen">
+        <div class="calendarView">
+            <div class="productName">
+                <h3>Test Service</h3>
+            </div>
+            <div class="timeZone">
+                <span>TimeZone :</span><span class="clientTimezone">Asia/Calcutta</span>
+            </div>
+            <div class="calendar", id="calendar">
+            </div>
+        </div>
+        <div class="timeSlots">
+            <div class="variantSelector">
+                <span class="variantLabel">Select From Variants</span>
+                <select class="variantDropdown">
+                    <option value="30">30 Mins</option>
+                    <option value="60">60 Mins</option>
+                </select>
+            </div>
+            <div class="timeSlotsList">
+                <span class="display_date"></span>
+                <div class="loader"></div>
+                <ul class="availableSlots">
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="appointo_footer" style="display: block;">
+            <div class="appointo_branding">
+                Made with <i class="fa-solid fa-heart"></i>by <a href="https://www.appointo.me">Appointo</a>
+            </div>
+            <div class="addToCart">
+                <button id="addToCart_btn">Next <i class="fa-solid fa-chevron-right"></i> </button>
+            </div>
+            <span id="present_date"></span>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

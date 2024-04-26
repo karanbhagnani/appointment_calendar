@@ -1,0 +1,220 @@
+*{
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+}
+#logo{
+    width: 16rem;
+}
+.productName{
+    margin: 2rem;
+    margin-bottom: 0rem;
+    font-size: 34px;
+}
+.display_date{
+  font-size: 12px;
+  opacity: .7;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2rem;
+  height: 2rem;
+}
+#present_date{
+  display: none;
+}
+.clientTimezone{
+    opacity: 0.5;
+}
+.timeZone{
+    margin: 2rem;
+    margin-top: 0rem;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100vw;
+    box-shadow: 2px 2px 2px 1px rgba(181, 178, 178, 0.2);
+}
+.navItem{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+.item{
+    margin: 2rem;
+    font-size: larger;
+}
+.share{
+    border:  2px solid #1abc9c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    line-height: 3rem;
+    border-radius: 2rem;
+    font-size: 14px;
+    color: #1abc9c;
+}
+.fa-solid{
+    margin-right: 1rem;
+}
+.mainScreen{
+    display: flex;
+    border-radius: 1rem;
+    align-content:center;
+    justify-content: center;
+    margin-top: 4rem;
+    height: max-content;
+    flex-wrap: wrap;
+}
+.calendarView{
+    border: 2px solid transparent;
+    border-top-left-radius: 1rem;
+    width: 30%;
+    background-color: #ebebf0;
+}
+.timeSlots{
+    border: 2px solid transparent;
+    border-top-right-radius: 1rem;
+    width: 40%;
+    background-color: #ffffff;
+    max-height: 500px;
+}
+.calendar{
+    margin: 1rem;
+    border: 2px solid #ebebf0;
+    margin-top: 2rem;
+    border-radius: 2rem;
+}
+#calendar{
+    background-color: white !important;
+    color: black !important;
+}
+.vanilla-calendar-header *{
+  color: #1abc9c !important;
+}
+  .variantSelector{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    border-bottom: 1px solid #c8c9d9;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  .variantLabel{
+    font-size: 12px;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .variantDropdown{
+    border-radius: 7px;
+    height: 3rem;
+    background-color: #fafafc;
+    color: #1abc9c;
+    border-color: #c8c9d9;
+    font-size: 15px;
+    padding: 0.675em 6em 0.675em 1em;
+  }
+  .availableSlots{
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+    max-height: 400px;
+    overflow: scroll;
+  }
+  .availableSlotsli{
+    border: 2px solid #1abc9c;
+    margin-bottom: 2rem;
+    appearance: auto;
+    line-height: 50px;
+    width: 86%;
+    text-align: center;
+    border-radius: 15px;
+    color: #19bc9b;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .availableSlotsli:focus {
+    background-color: #1abc9c;
+    color: white;
+  }
+  .availableSlotsli .addToCart :focus{
+    display: flex;
+  }
+
+.appointo_footer{
+    position: absolute;
+    top: 45rem;
+    width: 70.5%;
+    height: 3.5rem;
+    background-color: #1abc9c;
+    margin-top: -1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+.appointo_branding{
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+a{
+    color: white;
+}
+.vanilla-calendar{
+  width: 92% !important;
+  height: 26rem !important;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #1abc9c; 
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin-left: 10rem;
+  display: none;
+}
+.addToCart{
+  margin-right: 1rem;
+  visibility: none;
+  display: none;
+}
+.availableSlotsli:focus + .addToCart{
+  display: flex;
+}
+#addToCart_btn{
+  background-color: white;
+  line-height: 2.5rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 5rem;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+.fa-chevron-right{
+  margin-left: .5rem;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  @media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+  }
+  
